@@ -1,0 +1,165 @@
+[gd_scene format=3 uid="uid://cbyp1xwa5d3e1"]
+
+[ext_resource type="Script" uid="uid://dyys16d60e4g2" path="res://scenes/level.gd" id="1_ppgk2"]
+[ext_resource type="Texture2D" uid="uid://cnl5nmeq6ga2l" path="res://Backgrounds/darkPurple.png" id="1_w7c3h"]
+[ext_resource type="PackedScene" uid="uid://wps0hpecyxnr" path="res://scenes/player.tscn" id="2_w8frs"]
+[ext_resource type="Texture2D" uid="uid://clit773u1osqs" path="res://PNG/Effects/star1.png" id="3_2r41h"]
+[ext_resource type="Texture2D" uid="uid://bvdfp4p256kbj" path="res://PNG/Effects/star2.png" id="4_klq6b"]
+[ext_resource type="Texture2D" uid="uid://0bjnn7hq3qp5" path="res://PNG/Effects/star3.png" id="5_b121j"]
+[ext_resource type="PackedScene" uid="uid://dn1vdyt00eyk8" path="res://scenes/ui.tscn" id="7_klq6b"]
+[ext_resource type="AudioStream" uid="uid://bxqrtpkxqba38" path="res://Bonus/battle.wav" id="8_b121j"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8c41q"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_2r41h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_klq6b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_b121j")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w8frs"]
+size = Vector2(200, 720)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mx8sn"]
+size = Vector2(1422, 107)
+
+[node name="Level" type="Node2D" unique_id=420894635]
+script = ExtResource("1_ppgk2")
+
+[node name="BG" type="Sprite2D" parent="." unique_id=539195946]
+position = Vector2(643.99994, 365.24997)
+scale = Vector2(5.171, 2.967)
+texture = ExtResource("1_w7c3h")
+metadata/_edit_lock_ = true
+
+[node name="stars" type="Node2D" parent="." unique_id=203486330]
+metadata/_edit_lock_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="stars" unique_id=830200818]
+sprite_frames = SubResource("SpriteFrames_8c41q")
+autoplay = "default"
+frame = 2
+frame_progress = 0.4437879
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="stars" unique_id=1385005790]
+sprite_frames = SubResource("SpriteFrames_8c41q")
+autoplay = "default"
+frame = 2
+frame_progress = 0.4437879
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="stars" unique_id=2072043911]
+sprite_frames = SubResource("SpriteFrames_8c41q")
+autoplay = "default"
+frame = 2
+frame_progress = 0.4437879
+
+[node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="stars" unique_id=1495006397]
+sprite_frames = SubResource("SpriteFrames_8c41q")
+autoplay = "default"
+frame = 2
+frame_progress = 0.4437879
+
+[node name="AnimatedSprite2D5" type="AnimatedSprite2D" parent="stars" unique_id=837128502]
+sprite_frames = SubResource("SpriteFrames_8c41q")
+autoplay = "default"
+frame = 2
+frame_progress = 0.4437879
+
+[node name="AnimatedSprite2D6" type="AnimatedSprite2D" parent="stars" unique_id=1764368409]
+sprite_frames = SubResource("SpriteFrames_8c41q")
+autoplay = "default"
+frame = 2
+frame_progress = 0.4437879
+
+[node name="AnimatedSprite2D7" type="AnimatedSprite2D" parent="stars" unique_id=1177574255]
+sprite_frames = SubResource("SpriteFrames_8c41q")
+autoplay = "default"
+frame = 2
+frame_progress = 0.4437879
+
+[node name="AnimatedSprite2D8" type="AnimatedSprite2D" parent="stars" unique_id=931057673]
+sprite_frames = SubResource("SpriteFrames_8c41q")
+autoplay = "default"
+frame = 2
+frame_progress = 0.4437879
+
+[node name="AnimatedSprite2D9" type="AnimatedSprite2D" parent="stars" unique_id=1077337217]
+sprite_frames = SubResource("SpriteFrames_8c41q")
+autoplay = "default"
+frame = 2
+frame_progress = 0.4437879
+
+[node name="AnimatedSprite2D10" type="AnimatedSprite2D" parent="stars" unique_id=1549164867]
+sprite_frames = SubResource("SpriteFrames_8c41q")
+autoplay = "default"
+frame = 2
+frame_progress = 0.4437879
+
+[node name="AnimatedSprite2D11" type="AnimatedSprite2D" parent="stars" unique_id=699984968]
+sprite_frames = SubResource("SpriteFrames_8c41q")
+autoplay = "default"
+frame = 2
+frame_progress = 0.4437879
+
+[node name="Player" parent="." unique_id=1606701109 instance=ExtResource("2_w8frs")]
+scale = Vector2(2.549, 1.463)
+
+[node name="Borders" type="Node2D" parent="." unique_id=852023662]
+metadata/_edit_lock_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Borders" unique_id=5680128]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D" unique_id=462331717]
+position = Vector2(1383, 360)
+shape = SubResource("RectangleShape2D_w8frs")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Borders" unique_id=272253849]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D3" unique_id=854697203]
+position = Vector2(652, -53)
+shape = SubResource("RectangleShape2D_mx8sn")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Borders" unique_id=94048721]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D4" unique_id=879986593]
+position = Vector2(682, 776)
+shape = SubResource("RectangleShape2D_mx8sn")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Borders" unique_id=64430903]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D2" unique_id=117295434]
+position = Vector2(-102, 365)
+shape = SubResource("RectangleShape2D_w8frs")
+
+[node name="MeteorTimer" type="Timer" parent="." unique_id=769101822]
+wait_time = 0.201
+autostart = true
+
+[node name="meteors" type="Node2D" parent="." unique_id=958128994]
+scale = Vector2(1.5, 1.5)
+metadata/_edit_lock_ = true
+
+[node name="Lasers" type="Node2D" parent="." unique_id=2133772523]
+metadata/_edit_lock_ = true
+
+[node name="UI" parent="." unique_id=2142591861 instance=ExtResource("7_klq6b")]
+
+[node name="Battle" type="AudioStreamPlayer2D" parent="." unique_id=1848012378]
+stream = ExtResource("8_b121j")
+volume_db = -29.193
+
+[connection signal="laser" from="Player" to="." method="_on_player_laser"]
+[connection signal="timeout" from="MeteorTimer" to="." method="_on_meteor_timer_timeout"]

@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://cvt104sxed54o"]
+
+[ext_resource type="Script" uid="uid://cebt4e60nhjt2" path="res://scenes/game_start.gd" id="1_cd562"]
+[ext_resource type="FontFile" uid="uid://5h2x8rkfhn1n" path="res://Bonus/kenvector_future.ttf" id="1_jahr7"]
+[ext_resource type="Texture2D" uid="uid://cnl5nmeq6ga2l" path="res://Backgrounds/darkPurple.png" id="2_s5y6q"]
+[ext_resource type="AudioStream" uid="uid://nvley1ugnrc4" path="res://Bonus/menu.wav" id="4_kdykw"]
+
+[node name="Game_start" type="Control" unique_id=349727113]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cd562")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=182306612]
+position = Vector2(646, 374)
+scale = Vector2(5.40625, 3.125)
+texture = ExtResource("2_s5y6q")
+metadata/_edit_lock_ = true
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1743560910]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="CenterContainer" unique_id=1603647790]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_jahr7")
+theme_override_font_sizes/font_size = 60
+text = "Press Space To Start"
+
+[node name="Game" type="AudioStreamPlayer2D" parent="." unique_id=2106055163]
+stream = ExtResource("4_kdykw")
+volume_db = -1.0

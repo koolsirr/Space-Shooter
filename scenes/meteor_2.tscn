@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://b8brp0hacobwu"]
+
+[ext_resource type="Texture2D" uid="uid://c101y080em734" path="res://PNG/Meteors/1.png" id="1_nkqiy"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_w3yqm"]
+radius = 44.011364
+
+[node name="meteor2" type="Area2D" unique_id=2008262277]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=57668816]
+texture = ExtResource("1_nkqiy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=99507182]
+shape = SubResource("CircleShape2D_w3yqm")

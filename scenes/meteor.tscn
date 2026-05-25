@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cyqqgordmh7pa"]
+
+[ext_resource type="Script" uid="uid://bg5byi1nmovea" path="res://scenes/meteor.gd" id="1_pxso2"]
+[ext_resource type="AudioStream" uid="uid://c6kwqijp5qpca" path="res://Bonus/sfx_shieldDown.ogg" id="2_pxso2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tcwo0"]
+radius = 15.033297
+
+[node name="meteor" type="Area2D" unique_id=134208783]
+collision_layer = 2
+collision_mask = 9
+script = ExtResource("1_pxso2")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=999613933]
+position = Vector2(-7.6293945e-06, 0)
+scale = Vector2(0.35148516, 0.4047619)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1104496022]
+shape = SubResource("CircleShape2D_tcwo0")
+
+[node name="Explode" type="AudioStreamPlayer2D" parent="." unique_id=1685662381]
+stream = ExtResource("2_pxso2")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
