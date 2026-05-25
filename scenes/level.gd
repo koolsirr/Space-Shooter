@@ -6,6 +6,7 @@ var laser_scene: PackedScene = load("res://scenes/laser.tscn")
 var health: int = 3
 
 func _ready() -> void:
+	Global.score = 0
 	$Battle.play()
 	get_tree().call_group('ui', 'set_health', health)
 	

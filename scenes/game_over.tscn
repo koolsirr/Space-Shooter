@@ -73,4 +73,3 @@ text = "Press Space to start again"
 [node name="Game" type="AudioStreamPlayer2D" parent="." unique_id=1095918400]
 stream = ExtResource("4_racf3")
 volume_db = -1.0
-stream_paused = true
